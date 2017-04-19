@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+DOCKER_VERSION=7-17.04.0-alpine
+
+docker tag node-build gravygaming/node-build:latest
+docker tag node-build gravygaming/node-build:$DOCKER_VERSION
+docker push gravygaming/node-build
