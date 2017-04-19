@@ -1,4 +1,6 @@
-FROM node:7-alpine
+FROM node:7.9-alpine
+
+# ----
 
 # https://github.com/docker-library/docker/tree/master/17.04
 
@@ -21,3 +23,7 @@ RUN set -x \
     && docker -v
 
 COPY docker-entrypoint.sh /usr/local/bin/
+
+# ----
+
+CMD [ "node" ]

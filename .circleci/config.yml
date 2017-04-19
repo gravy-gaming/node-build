@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    working_directory: /home/node-build
+    docker:
+      - image: ubuntu:latest
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: sh script/build
